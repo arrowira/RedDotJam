@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://djyg3yfqvrvqv"]
+[gd_scene load_steps=5 format=3 uid="uid://djyg3yfqvrvqv"]
+
+[ext_resource type="Texture2D" uid="uid://bm3ktic81brxs" path="res://icon.svg" id="1_4yrl0"]
+[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://redDot.tscn" id="1_5fw3v"]
+[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat.tscn" id="2_6v5ln"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uadrq"]
+size = Vector2(428, 20)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="redDot" parent="." instance=ExtResource("1_5fw3v")]
+position = Vector2(-63, 13)
+
+[node name="Cat" parent="." instance=ExtResource("2_6v5ln")]
+position = Vector2(14, 31)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-19, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(13, 180)
+shape = SubResource("RectangleShape2D_uadrq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(15, 182)
+scale = Vector2(3.5, 0.351563)
+texture = ExtResource("1_4yrl0")
