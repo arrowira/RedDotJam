@@ -1,11 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://djyg3yfqvrvqv"]
 
-[ext_resource type="Texture2D" uid="uid://bm3ktic81brxs" path="res://icon.svg" id="1_4yrl0"]
 [ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="1_5fw3v"]
 [ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="1_f7rki"]
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_nehsm"]
 [ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="2_6v5ln"]
 [ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="4_fgjsn"]
+[ext_resource type="PackedScene" uid="uid://dwh15m6vaxtdp" path="res://wardrobe_large.tscn" id="5_q8gm7"]
+[ext_resource type="PackedScene" uid="uid://i6sf60nrefe0" path="res://wardrobe_small.tscn" id="5_x401n"]
 
 [sub_resource type="Animation" id="Animation_yryto"]
 length = 0.001
@@ -97,9 +98,6 @@ _data = {
 "fade_out_black": SubResource("Animation_drj5d")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uadrq"]
-size = Vector2(428, 20)
-
 [node name="Node2D" type="Node2D"]
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -126,30 +124,11 @@ color = Color(0, 0, 0, 0)
 [node name="Cat" parent="." instance=ExtResource("2_6v5ln")]
 position = Vector2(14, 31)
 
-[node name="wall1" type="StaticBody2D" parent="."]
-position = Vector2(-38, 28)
-rotation = -1.51053
+[node name="wardrobe_small" parent="." instance=ExtResource("5_x401n")]
+position = Vector2(340, 267)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall1"]
-position = Vector2(13, 180)
-shape = SubResource("RectangleShape2D_uadrq")
-
-[node name="Sprite2D2" type="Sprite2D" parent="wall1"]
-position = Vector2(15, 182)
-scale = Vector2(3.5, 0.351563)
-texture = ExtResource("1_4yrl0")
-
-[node name="wall2" type="StaticBody2D" parent="."]
-position = Vector2(-19, 14)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall2"]
-position = Vector2(13, 180)
-shape = SubResource("RectangleShape2D_uadrq")
-
-[node name="Sprite2D2" type="Sprite2D" parent="wall2"]
-position = Vector2(15, 182)
-scale = Vector2(3.5, 0.351563)
-texture = ExtResource("1_4yrl0")
+[node name="wardrobeLarge" parent="." instance=ExtResource("5_q8gm7")]
+position = Vector2(-15, 271)
 
 [node name="exit" parent="." instance=ExtResource("4_fgjsn")]
 position = Vector2(-223, 56)

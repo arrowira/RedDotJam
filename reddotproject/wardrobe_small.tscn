@@ -6,6 +6,7 @@
 size = Vector2(1077, 901)
 
 [node name="wardrobe_small" type="StaticBody2D"]
+scale = Vector2(0.25, 0.25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 270.5)
