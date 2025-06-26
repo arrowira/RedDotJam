@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://deh4lr4l0eqfj"]
 
-[ext_resource type="Script" path="res://exitParent.gd" id="1_7uasp"]
-[ext_resource type="Script" path="res://exit.gd" id="1_i0jty"]
+[ext_resource type="Script" path="res://common/exitParent.gd" id="1_7uasp"]
+[ext_resource type="Script" path="res://common/exit.gd" id="1_i0jty"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8oel8"]
 size = Vector2(13, 70)

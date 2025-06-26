@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://djyg3yfqvrvqv"]
 
 [ext_resource type="Texture2D" uid="uid://bm3ktic81brxs" path="res://icon.svg" id="1_4yrl0"]
-[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://redDot.tscn" id="1_5fw3v"]
-[ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://scene_transition.tscn" id="1_f7rki"]
-[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat.tscn" id="2_6v5ln"]
-[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://exit.tscn" id="4_fgjsn"]
+[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="1_5fw3v"]
+[ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="1_f7rki"]
+[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="2_6v5ln"]
+[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit.tscn" id="4_fgjsn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uadrq"]
 size = Vector2(428, 20)
