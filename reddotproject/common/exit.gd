@@ -12,6 +12,9 @@ func _on_body_entered(body):
         
         #body.queue_free()
         
+        var exit = get_parent()
+        exit.ui.fade_into_black()
+        
         $Timer.start()
         
         
