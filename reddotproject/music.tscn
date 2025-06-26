@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds1nrgy1ijfnn"]
+
+[ext_resource type="AudioStream" uid="uid://dn7wvetlq0my5" path="res://catGameDemo.mp3" id="1_t2t4s"]
+
+[node name="Node2D" type="AudioStreamPlayer"]
+stream = ExtResource("1_t2t4s")
+autoplay = true
+parameters/looping = true
