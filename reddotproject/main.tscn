@@ -5,7 +5,34 @@
 [ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="1_f7rki"]
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_nehsm"]
 [ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="2_6v5ln"]
-[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit.tscn" id="4_fgjsn"]
+[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="4_fgjsn"]
+
+[sub_resource type="Animation" id="Animation_yryto"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackFade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackFade:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_o8pia"]
 resource_name = "fade_into_black"
@@ -33,33 +60,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_yryto"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BlackFade:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("BlackFade:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_drj5d"]
