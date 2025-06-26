@@ -4,17 +4,24 @@ extends CharacterBody2D
 
 const jumpVelocity = -400.0
 @export var speed = 3
+@export var friction = 0.05
 var dir = 0
 var seesPointer = false
 var redDotVisible = true
 func _physics_process(delta: float) -> void:
+	
+	
+	
 	$vision.target_position = to_local(get_global_mouse_position())
 	if $vision.is_colliding():
 		redDotVisible = false
-		print($vision.get_collider())
+		#high friction
+		velocity.x = lerp(velocity.x, 0.0, 10*friction)
 	else:
-		print("visible")
+		
 		redDotVisible = true
+		#low friction
+		velocity.x = lerp(velocity.x, 0.0, friction)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
