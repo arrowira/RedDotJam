@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://i6sf60nrefe0"]
+
+[ext_resource type="Texture2D" uid="uid://bvs0vvc3h3r6f" path="res://sprites/wardrobeMini-2.png.png" id="1_s04ss"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3jrm"]
+size = Vector2(1077, 901)
+
+[node name="wardrobe_small" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 270.5)
+shape = SubResource("RectangleShape2D_g3jrm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_s04ss")
