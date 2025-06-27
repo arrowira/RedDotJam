@@ -25,13 +25,20 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	else:
+		$AnimationPlayer.play("walk")
 	if redDotVisible:
 		#direction cat moves in
 		dir = get_global_mouse_position().x-position.x
 		if dir <0:
 			dir = -1
+			
 		else:
 			dir = 1
+		if velocity.x >0:
+			$Sprite2D.flip_h = false
+		else:
+			$Sprite2D.flip_h = true
 			
 		
 		#cat movement
