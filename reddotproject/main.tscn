@@ -5,8 +5,8 @@
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_nehsm"]
 [ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="2_6v5ln"]
 [ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="4_fgjsn"]
-[ext_resource type="PackedScene" uid="uid://dwh15m6vaxtdp" path="res://wardrobe_large.tscn" id="5_q8gm7"]
-[ext_resource type="PackedScene" uid="uid://i6sf60nrefe0" path="res://wardrobe_small.tscn" id="5_x401n"]
+[ext_resource type="PackedScene" uid="uid://dwh15m6vaxtdp" path="res://objects/wardrobe_large.tscn" id="5_q8gm7"]
+[ext_resource type="PackedScene" uid="uid://i6sf60nrefe0" path="res://objects/wardrobe_small.tscn" id="5_x401n"]
 
 [sub_resource type="Animation" id="Animation_yryto"]
 length = 0.001
