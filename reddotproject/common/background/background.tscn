@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://drb6vgeymex4i"]
+
+[ext_resource type="Texture2D" uid="uid://c2yols8b1d35w" path="res://textures/wallPaper-1.png.png" id="1_vrbbt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1713r"]
+size = Vector2(2136.8, 20)
+
+[node name="Background" type="Node2D"]
+z_index = -10
+scale = Vector2(5, 5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-4.80005, 29.6667)
+shape = SubResource("RectangleShape2D_1713r")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(30, 0)
+repeat_times = 70
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+texture = ExtResource("1_vrbbt")

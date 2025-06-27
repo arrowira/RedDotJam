@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://ld4sfm11lipc"]
+[gd_scene load_steps=7 format=3 uid="uid://ld4sfm11lipc"]
+
+[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="1_tee23"]
+[ext_resource type="PackedScene" uid="uid://bf0frawo2u75s" path="res://objects/lamp/lamp_orange_small.tscn" id="2_eb6gp"]
+[ext_resource type="PackedScene" uid="uid://d4lemonl2dmg0" path="res://objects/lamp/lamp_orange_large.tscn" id="3_s047g"]
+[ext_resource type="PackedScene" uid="uid://dwh15m6vaxtdp" path="res://objects/wardrobe/wardrobe_large.tscn" id="4_00bok"]
+[ext_resource type="PackedScene" uid="uid://i6sf60nrefe0" path="res://objects/wardrobe/wardrobe_small.tscn" id="5_q152a"]
+[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="6_7d38h"]
 
 [node name="lvl2" type="Node2D"]
+
+[node name="Cat" parent="." instance=ExtResource("1_tee23")]
+position = Vector2(-3, -24)
+
+[node name="lampOrangeSmall" parent="." instance=ExtResource("2_eb6gp")]
+position = Vector2(270, 2)
+
+[node name="lampOrangeLarge" parent="." instance=ExtResource("3_s047g")]
+position = Vector2(690, 10)
+
+[node name="wardrobeLarge" parent="." instance=ExtResource("4_00bok")]
+position = Vector2(492, 94)
+
+[node name="wardrobe_small" parent="." instance=ExtResource("5_q152a")]
+position = Vector2(-25, 179)
+
+[node name="redDot" parent="." instance=ExtResource("6_7d38h")]
+position = Vector2(146, -125)

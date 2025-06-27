@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://djyg3yfqvrvqv"]
+[gd_scene load_steps=13 format=3 uid="uid://djyg3yfqvrvqv"]
 
 [ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="1_5fw3v"]
 [ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="1_f7rki"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="4_fgjsn"]
 [ext_resource type="PackedScene" uid="uid://dwh15m6vaxtdp" path="res://objects/wardrobe/wardrobe_large.tscn" id="5_q8gm7"]
 [ext_resource type="PackedScene" uid="uid://i6sf60nrefe0" path="res://objects/wardrobe/wardrobe_small.tscn" id="5_x401n"]
+[ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="8_qemu7"]
 
 [sub_resource type="Animation" id="Animation_yryto"]
 length = 0.001
@@ -125,7 +126,7 @@ color = Color(0, 0, 0, 0)
 position = Vector2(5, -3)
 
 [node name="wardrobe_small" parent="." instance=ExtResource("5_x401n")]
-position = Vector2(327, 263)
+position = Vector2(367, 336)
 
 [node name="wardrobeLarge" parent="." instance=ExtResource("5_q8gm7")]
 position = Vector2(-15, 271)
@@ -133,3 +134,6 @@ position = Vector2(-15, 271)
 [node name="exit" parent="." instance=ExtResource("4_fgjsn")]
 position = Vector2(-223, 56)
 lvlName = "lvl_2"
+
+[node name="Background" parent="." instance=ExtResource("8_qemu7")]
+position = Vector2(148, 352)
