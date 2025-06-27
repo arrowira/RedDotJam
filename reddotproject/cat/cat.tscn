@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dbtoqjtdtm24r" path="res://cat/cat_walk.png" id="2_3b48m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cknl8"]
-size = Vector2(53, 36.5)
+size = Vector2(35, 25)
 
 [sub_resource type="Animation" id="Animation_qbfsd"]
 length = 0.001
@@ -52,7 +52,7 @@ speed = 1000
 friction = 0.005
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 13)
+position = Vector2(0.5, 19.5)
 shape = SubResource("RectangleShape2D_cknl8")
 
 [node name="Camera2D" type="Camera2D" parent="."]

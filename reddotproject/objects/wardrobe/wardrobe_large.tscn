@@ -3,13 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://b6io013dqadq6" path="res://objects/wardrobe/wardrobe_1.png" id="1_08gy2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e7gpe"]
-size = Vector2(1081, 1420)
+size = Vector2(948, 1424)
 
 [node name="wardrobeLarge" type="StaticBody2D"]
 scale = Vector2(0.25, 0.25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -6)
+position = Vector2(-2, 0)
 shape = SubResource("RectangleShape2D_e7gpe")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

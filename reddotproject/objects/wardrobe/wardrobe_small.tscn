@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bma1lt3cm78fj" path="res://objects/wardrobe/wardrobe_mini.png" id="1_qhvgl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g3jrm"]
-size = Vector2(1077, 901)
+size = Vector2(960, 901)
 
 [node name="wardrobe_small" type="StaticBody2D"]
 scale = Vector2(0.25, 0.25)
