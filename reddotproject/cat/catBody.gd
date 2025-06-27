@@ -17,12 +17,12 @@ func _physics_process(delta: float) -> void:
 	if $vision.is_colliding():
 		redDotVisible = false
 		#high friction
-		velocity.x = lerp(velocity.x, 0.0, 10*friction)
+		velocity.x = lerp(velocity.x, 0.0, 100*friction)
 	else:
 		
 		redDotVisible = true
 		#low friction
-		velocity.x = lerp(velocity.x, 0.0, friction)
+		velocity.x = lerp(velocity.x, 0.0, 10*friction)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
