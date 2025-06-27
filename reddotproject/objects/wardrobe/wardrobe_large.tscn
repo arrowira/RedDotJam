@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dwh15m6vaxtdp"]
 
-[ext_resource type="Texture2D" uid="uid://dxq260ewbe0r1" path="res://sprites/wardrobe-1.png.png" id="1_xvktv"]
+[ext_resource type="Texture2D" uid="uid://b6io013dqadq6" path="res://objects/wardrobe/wardrobe_1.png" id="1_08gy2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e7gpe"]
 size = Vector2(1081, 1420)
@@ -13,4 +13,5 @@ position = Vector2(-0.5, -6)
 shape = SubResource("RectangleShape2D_e7gpe")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_xvktv")
+scale = Vector2(9.92593, 9.92593)
+texture = ExtResource("1_08gy2")
