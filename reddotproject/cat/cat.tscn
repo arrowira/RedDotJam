@@ -64,8 +64,6 @@ texture = ExtResource("2_3b48m")
 centered = false
 hframes = 7
 
-[node name="Node2D" type="Node2D" parent="Sprite2D"]
-
 [node name="vision" type="RayCast2D" parent="."]
 position = Vector2(18, 11)
 target_position = Vector2(0, 99)
