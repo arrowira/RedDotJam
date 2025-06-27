@@ -1,14 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvbpvexlyuf02"]
 
 [ext_resource type="Script" path="res://laser/redDotMove.gd" id="1_q7igp"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_jb2st"]
-specular_color = Color(1, 0.234081, 0.356345, 1)
+[ext_resource type="Texture2D" uid="uid://gfgtjepgctm6" path="res://laser/laser.png" id="2_862tq"]
 
 [node name="redDot" type="Node2D"]
 script = ExtResource("1_q7igp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.5, 4.76837e-07)
-scale = Vector2(21, 24)
-texture = SubResource("CanvasTexture_jb2st")
+texture = ExtResource("2_862tq")
