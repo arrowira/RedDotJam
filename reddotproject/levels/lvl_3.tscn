@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4cjvoi2oefvl"]
+[gd_scene load_steps=9 format=3 uid="uid://c4cjvoi2oefvl"]
 
 [ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="1_uw1ej"]
 [ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="2_qmg8l"]
@@ -7,11 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="5_bv3xa"]
 [ext_resource type="PackedScene" uid="uid://dwh15m6vaxtdp" path="res://objects/wardrobe/wardrobe_large.tscn" id="6_khvbt"]
 [ext_resource type="PackedScene" uid="uid://chsyuygrotg64" path="res://objects/box/mediumBox.tscn" id="7_trr77"]
+[ext_resource type="PackedScene" uid="uid://cxc6uatiad08k" path="res://objects/shelf/shelf.tscn" id="8_1tgu4"]
 
 [node name="lvlTemplate" type="Node2D"]
 
 [node name="exit" parent="." instance=ExtResource("1_uw1ej")]
 position = Vector2(562, 233)
+lvlName = "lvl_4"
 
 [node name="Background" parent="." instance=ExtResource("2_qmg8l")]
 position = Vector2(131, 233)
@@ -30,3 +32,24 @@ position = Vector2(344, 147)
 
 [node name="boxMedium" parent="." instance=ExtResource("7_trr77")]
 position = Vector2(-133, 255)
+
+[node name="boxMedium2" parent="." instance=ExtResource("7_trr77")]
+position = Vector2(-269, 255)
+
+[node name="boxMedium3" parent="." instance=ExtResource("7_trr77")]
+position = Vector2(-205, 167)
+
+[node name="RichTextLabel" type="Label" parent="."]
+offset_left = -98.0
+offset_top = 70.0
+offset_right = 265.0
+offset_bottom = 166.0
+theme_override_colors/font_color = Color(1, 0.659072, 0.308694, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.263471, 0.514802, 1)
+theme_override_font_sizes/font_size = 30
+text = "If the cat can't see the laser, it won't move.
+"
+autowrap_mode = 3
+
+[node name="shelf" parent="." instance=ExtResource("8_1tgu4")]
+position = Vector2(81, 46)
