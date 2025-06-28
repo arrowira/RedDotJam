@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4cjvoi2oefvl"]
+
+[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="1_uw1ej"]
+[ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="2_qmg8l"]
+[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="3_qtwo7"]
+[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="4_y0h78"]
+[ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="5_bv3xa"]
+[ext_resource type="PackedScene" uid="uid://dwh15m6vaxtdp" path="res://objects/wardrobe/wardrobe_large.tscn" id="6_khvbt"]
+[ext_resource type="PackedScene" uid="uid://chsyuygrotg64" path="res://objects/box/mediumBox.tscn" id="7_trr77"]
+
+[node name="lvlTemplate" type="Node2D"]
+
+[node name="exit" parent="." instance=ExtResource("1_uw1ej")]
+position = Vector2(562, 233)
+
+[node name="Background" parent="." instance=ExtResource("2_qmg8l")]
+position = Vector2(131, 233)
+
+[node name="Cat" parent="." instance=ExtResource("3_qtwo7")]
+position = Vector2(84, 253)
+
+[node name="redDot" parent="." instance=ExtResource("4_y0h78")]
+position = Vector2(314, -18)
+
+[node name="sceneTransition" parent="." instance=ExtResource("5_bv3xa")]
+position = Vector2(-58, 123)
+
+[node name="wardrobeLarge" parent="." instance=ExtResource("6_khvbt")]
+position = Vector2(344, 147)
+
+[node name="boxMedium" parent="." instance=ExtResource("7_trr77")]
+position = Vector2(-133, 255)

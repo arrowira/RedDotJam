@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://ld4sfm11lipc"]
 
 [ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="1_tee23"]
-[ext_resource type="PackedScene" uid="uid://bf0frawo2u75s" path="res://objects/lamp/lamp_orange_small.tscn" id="2_eb6gp"]
-[ext_resource type="PackedScene" uid="uid://d4lemonl2dmg0" path="res://objects/lamp/lamp_orange_large.tscn" id="3_s047g"]
-[ext_resource type="PackedScene" uid="uid://dwh15m6vaxtdp" path="res://objects/wardrobe/wardrobe_large.tscn" id="4_00bok"]
+[ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="4_vqpi7"]
+[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="5_p6p7j"]
 [ext_resource type="PackedScene" uid="uid://i6sf60nrefe0" path="res://objects/wardrobe/wardrobe_small.tscn" id="5_q152a"]
+[ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="5_rcy4f"]
 [ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="6_7d38h"]
 
 [node name="lvl2" type="Node2D"]
@@ -12,17 +12,31 @@
 [node name="Cat" parent="." instance=ExtResource("1_tee23")]
 position = Vector2(-3, -24)
 
-[node name="lampOrangeSmall" parent="." instance=ExtResource("2_eb6gp")]
-position = Vector2(270, 2)
-
-[node name="lampOrangeLarge" parent="." instance=ExtResource("3_s047g")]
-position = Vector2(690, 10)
-
-[node name="wardrobeLarge" parent="." instance=ExtResource("4_00bok")]
-position = Vector2(492, 94)
-
 [node name="wardrobe_small" parent="." instance=ExtResource("5_q152a")]
 position = Vector2(-25, 179)
 
 [node name="redDot" parent="." instance=ExtResource("6_7d38h")]
 position = Vector2(146, -125)
+
+[node name="Background" parent="." instance=ExtResource("4_vqpi7")]
+position = Vector2(133, 198)
+
+[node name="wardrobe_small2" parent="." instance=ExtResource("5_q152a")]
+position = Vector2(391, 178)
+
+[node name="RichTextLabel" type="Label" parent="."]
+offset_left = -16.0
+offset_top = -99.0
+offset_right = 537.0
+offset_bottom = -57.0
+theme_override_colors/font_color = Color(1, 0.659072, 0.308694, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.263471, 0.514802, 1)
+theme_override_font_sizes/font_size = 30
+text = "Press R to restart the level
+"
+
+[node name="sceneTransition" parent="." instance=ExtResource("5_rcy4f")]
+
+[node name="exit" parent="." instance=ExtResource("5_p6p7j")]
+position = Vector2(441, 17)
+lvlName = "lvl_3"

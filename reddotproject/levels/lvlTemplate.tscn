@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4p101hw3o8pg"]
+
+[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="1_octfv"]
+[ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="2_h1oa0"]
+[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="3_t8f1a"]
+[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="4_5cvmp"]
+[ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="5_mjhsx"]
+
+[node name="lvlTemplate" type="Node2D"]
+
+[node name="exit" parent="." instance=ExtResource("1_octfv")]
+position = Vector2(336, 63)
+
+[node name="Background" parent="." instance=ExtResource("2_h1oa0")]
+position = Vector2(131, 233)
+
+[node name="Cat" parent="." instance=ExtResource("3_t8f1a")]
+position = Vector2(69, 3)
+
+[node name="redDot" parent="." instance=ExtResource("4_5cvmp")]
+position = Vector2(314, -18)
+
+[node name="sceneTransition" parent="." instance=ExtResource("5_mjhsx")]
+position = Vector2(96, 101)
