@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://drb6vgeymex4i"]
 
-[ext_resource type="Texture2D" uid="uid://c2yols8b1d35w" path="res://textures/wallPaper-1.png" id="1_vrbbt"]
+[ext_resource type="Texture2D" uid="uid://crrc6jxuihebn" path="res://textures/wallPaper-1-export.png" id="1_tt1tp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1713r"]
 size = Vector2(2136.8, 20)
@@ -20,4 +20,5 @@ repeat_size = Vector2(30, 0)
 repeat_times = 70
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
-texture = ExtResource("1_vrbbt")
+position = Vector2(0.2, -0.6)
+texture = ExtResource("1_tt1tp")
