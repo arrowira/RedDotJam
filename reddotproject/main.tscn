@@ -120,6 +120,8 @@ color = Color(0, 0, 0, 0)
 
 [node name="sceneTransition" parent="." instance=ExtResource("1_f7rki")]
 
+[node name="redDot" parent="." instance=ExtResource("1_5fw3v")]
+
 [node name="Cat" parent="." instance=ExtResource("2_6v5ln")]
 position = Vector2(5, -3)
 
@@ -135,5 +137,3 @@ lvlName = "lvl_2"
 
 [node name="Background" parent="." instance=ExtResource("8_qemu7")]
 position = Vector2(148, 352)
-
-[node name="redDot" parent="." instance=ExtResource("1_5fw3v")]
