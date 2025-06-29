@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4p101hw3o8pg"]
+[gd_scene load_steps=13 format=3 uid="uid://d1dtga8wevo35"]
 
-[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="1_octfv"]
-[ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="2_h1oa0"]
-[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="3_t8f1a"]
-[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="4_5cvmp"]
-[ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="5_mjhsx"]
-[ext_resource type="Script" path="res://ui/ui.gd" id="6_ni7ks"]
+[ext_resource type="Script" path="res://ui/ui.gd" id="1_tw7vc"]
+[ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="2_7as4s"]
+[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="3_7a7pq"]
+[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="4_uaok5"]
+[ext_resource type="PackedScene" uid="uid://dwh15m6vaxtdp" path="res://objects/wardrobe/wardrobe_large.tscn" id="5_avcxl"]
+[ext_resource type="PackedScene" uid="uid://chsyuygrotg64" path="res://objects/box/mediumBox.tscn" id="7_scmps"]
+[ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="7_usk27"]
+[ext_resource type="PackedScene" uid="uid://u65k0w6alq57" path="res://collectable.tscn" id="8_slc2o"]
 
 [sub_resource type="Animation" id="Animation_yryto"]
 length = 0.001
@@ -97,25 +99,10 @@ _data = {
 "fade_out_black": SubResource("Animation_drj5d")
 }
 
-[node name="lvlTemplate" type="Node2D"]
-
-[node name="exit" parent="." instance=ExtResource("1_octfv")]
-position = Vector2(336, 63)
-
-[node name="Background" parent="." instance=ExtResource("2_h1oa0")]
-position = Vector2(131, 233)
-
-[node name="Cat" parent="." instance=ExtResource("3_t8f1a")]
-position = Vector2(69, 3)
-
-[node name="redDot" parent="." instance=ExtResource("4_5cvmp")]
-position = Vector2(314, -18)
-
-[node name="sceneTransition" parent="." instance=ExtResource("5_mjhsx")]
-position = Vector2(96, 101)
+[node name="Node2D" type="Node2D"]
 
 [node name="UI" type="CanvasLayer" parent="."]
-script = ExtResource("6_ni7ks")
+script = ExtResource("1_tw7vc")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
 libraries = {
@@ -130,3 +117,41 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
+
+[node name="sceneTransition" parent="." instance=ExtResource("2_7as4s")]
+
+[node name="redDot" parent="." instance=ExtResource("3_7a7pq")]
+
+[node name="Cat" parent="." instance=ExtResource("4_uaok5")]
+position = Vector2(185, 366)
+
+[node name="wardrobeLarge" parent="." instance=ExtResource("5_avcxl")]
+position = Vector2(-15, 271)
+
+[node name="Background" parent="." instance=ExtResource("7_usk27")]
+position = Vector2(148, 352)
+
+[node name="wardrobeLarge2" parent="." instance=ExtResource("5_avcxl")]
+position = Vector2(937, 270)
+
+[node name="RichTextLabel" type="Label" parent="."]
+offset_left = 379.0
+offset_top = 143.0
+offset_right = 932.0
+offset_bottom = 185.0
+theme_override_colors/font_color = Color(1, 0.659072, 0.308694, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.263471, 0.514802, 1)
+theme_override_font_sizes/font_size = 30
+text = "The End"
+
+[node name="boxMedium" parent="." instance=ExtResource("7_scmps")]
+position = Vector2(443, 370)
+
+[node name="collectable" parent="." instance=ExtResource("8_slc2o")]
+position = Vector2(676, 387)
+
+[node name="collectable2" parent="." instance=ExtResource("8_slc2o")]
+position = Vector2(282, 396)
+
+[node name="collectable3" parent="." instance=ExtResource("8_slc2o")]
+position = Vector2(435, 264)

@@ -1,15 +1,17 @@
-[gd_scene load_steps=15 format=3 uid="uid://bc0bc3wnawcal"]
+[gd_scene load_steps=17 format=3 uid="uid://b4p101hw3o8pg"]
 
-[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="1_x5srp"]
-[ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="2_ro6mw"]
-[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="3_jqjx2"]
-[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="4_a2sxq"]
-[ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="5_t4hna"]
-[ext_resource type="Script" path="res://ui/ui.gd" id="6_b4q03"]
-[ext_resource type="PackedScene" uid="uid://dwh15m6vaxtdp" path="res://objects/wardrobe/wardrobe_large.tscn" id="7_6jnjj"]
-[ext_resource type="PackedScene" uid="uid://d4lemonl2dmg0" path="res://objects/lamp/lamp_orange_large.tscn" id="7_a2nw4"]
-[ext_resource type="PackedScene" uid="uid://chsyuygrotg64" path="res://objects/box/mediumBox.tscn" id="8_gpkte"]
-[ext_resource type="PackedScene" uid="uid://u65k0w6alq57" path="res://collectable.tscn" id="10_t8mlp"]
+[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="1_hax2y"]
+[ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="2_dlvd1"]
+[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="3_5tgpd"]
+[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="4_x5qyy"]
+[ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="5_kn8f0"]
+[ext_resource type="Script" path="res://ui/ui.gd" id="6_nptr2"]
+[ext_resource type="PackedScene" uid="uid://i6sf60nrefe0" path="res://objects/wardrobe/wardrobe_small.tscn" id="7_d7m0i"]
+[ext_resource type="PackedScene" uid="uid://chsyuygrotg64" path="res://objects/box/mediumBox.tscn" id="8_bfwig"]
+[ext_resource type="PackedScene" uid="uid://cxc6uatiad08k" path="res://objects/shelf/shelf.tscn" id="9_ohirs"]
+[ext_resource type="PackedScene" uid="uid://dwh15m6vaxtdp" path="res://objects/wardrobe/wardrobe_large.tscn" id="10_o0iwb"]
+[ext_resource type="PackedScene" uid="uid://d4lemonl2dmg0" path="res://objects/lamp/lamp_orange_large.tscn" id="11_6f48y"]
+[ext_resource type="PackedScene" uid="uid://u65k0w6alq57" path="res://collectable.tscn" id="12_hinoy"]
 
 [sub_resource type="Animation" id="Animation_yryto"]
 length = 0.001
@@ -103,24 +105,24 @@ _data = {
 
 [node name="lvlTemplate" type="Node2D"]
 
-[node name="exit" parent="." instance=ExtResource("1_x5srp")]
-position = Vector2(524, -105)
-lvlName = "lvl_9"
+[node name="exit" parent="." instance=ExtResource("1_hax2y")]
+position = Vector2(2521, 24)
+lvlName = "lvl_6"
 
-[node name="Background" parent="." instance=ExtResource("2_ro6mw")]
+[node name="Background" parent="." instance=ExtResource("2_dlvd1")]
 position = Vector2(131, 233)
 
-[node name="Cat" parent="." instance=ExtResource("3_jqjx2")]
-position = Vector2(80, 222)
+[node name="Cat" parent="." instance=ExtResource("3_5tgpd")]
+position = Vector2(3, 22)
 
-[node name="redDot" parent="." instance=ExtResource("4_a2sxq")]
+[node name="redDot" parent="." instance=ExtResource("4_x5qyy")]
 position = Vector2(314, -18)
 
-[node name="sceneTransition" parent="." instance=ExtResource("5_t4hna")]
+[node name="sceneTransition" parent="." instance=ExtResource("5_kn8f0")]
 position = Vector2(96, 101)
 
 [node name="UI" type="CanvasLayer" parent="."]
-script = ExtResource("6_b4q03")
+script = ExtResource("6_nptr2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
 libraries = {
@@ -136,29 +138,32 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
-[node name="lampOrangeLarge" parent="." instance=ExtResource("7_a2nw4")]
-position = Vector2(-142, 53)
+[node name="wardrobe_small" parent="." instance=ExtResource("7_d7m0i")]
+position = Vector2(69, 212)
 
-[node name="lampOrangeLarge2" parent="." instance=ExtResource("7_a2nw4")]
-position = Vector2(290, 54)
+[node name="boxMedium" parent="." instance=ExtResource("8_bfwig")]
+position = Vector2(135, 29)
 
-[node name="boxMedium" parent="." instance=ExtResource("8_gpkte")]
-position = Vector2(211, 253)
+[node name="wardrobe_small2" parent="." instance=ExtResource("7_d7m0i")]
+position = Vector2(729, 213)
 
-[node name="boxMedium2" parent="." instance=ExtResource("8_gpkte")]
-position = Vector2(-77, 156)
+[node name="shelf" parent="." instance=ExtResource("9_ohirs")]
+position = Vector2(1090, -43)
 
-[node name="boxMedium3" parent="." instance=ExtResource("8_gpkte")]
-position = Vector2(214, 61)
+[node name="wardrobeLarge" parent="." instance=ExtResource("10_o0iwb")]
+position = Vector2(1918, 146)
 
-[node name="boxMedium4" parent="." instance=ExtResource("8_gpkte")]
-position = Vector2(-75, -33)
+[node name="boxMedium2" parent="." instance=ExtResource("8_bfwig")]
+position = Vector2(791, 30)
 
-[node name="boxMedium5" parent="." instance=ExtResource("8_gpkte")]
-position = Vector2(215, -140)
+[node name="lampOrangeLarge" parent="." instance=ExtResource("11_6f48y")]
+position = Vector2(1329, 52)
 
-[node name="wardrobeLarge" parent="." instance=ExtResource("7_6jnjj")]
-position = Vector2(528, 146)
+[node name="boxMedium3" parent="." instance=ExtResource("8_bfwig")]
+position = Vector2(1166, -125)
 
-[node name="collectable" parent="." instance=ExtResource("10_t8mlp")]
-position = Vector2(11, -233)
+[node name="wardrobe_small3" parent="." instance=ExtResource("7_d7m0i")]
+position = Vector2(2519, 209)
+
+[node name="collectable" parent="." instance=ExtResource("12_hinoy")]
+position = Vector2(1158, -358)

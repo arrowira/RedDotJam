@@ -85,4 +85,19 @@ libraries = {
 "": SubResource("AnimationLibrary_pfhbx")
 }
 
+[node name="Timer2" type="Timer" parent="Area2D"]
+wait_time = 1.5
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D"]
+
+[node name="Label" type="Label" parent="Area2D/CanvasLayer"]
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 60.0
+offset_bottom = 39.0
+scale = Vector2(2, 2)
+text = "Hello
+"
+
 [connection signal="timeout" from="Area2D/Timer" to="Area2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="Area2D/Timer2" to="Area2D" method="_on_timer_2_timeout"]
