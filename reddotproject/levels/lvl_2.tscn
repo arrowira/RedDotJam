@@ -130,7 +130,6 @@ text = "Press R to restart the level
 
 [node name="exit" parent="." instance=ExtResource("5_p6p7j")]
 position = Vector2(441, 17)
-lvlName = "lvl_3"
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("7_jmh5r")
