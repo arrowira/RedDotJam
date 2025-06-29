@@ -16,9 +16,16 @@ position = Vector2(-4.80005, 29.6667)
 shape = SubResource("RectangleShape2D_1713r")
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
+scale = Vector2(0.6, 0.6)
+scroll_offset = Vector2(-0.2, 8)
 repeat_size = Vector2(30, 0)
-repeat_times = 70
+repeat_times = 150
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
-position = Vector2(0.2, -0.6)
+position = Vector2(0.333333, -3)
+texture = ExtResource("1_tt1tp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-15.6667, -498.667)
+rotation = 3.14151
 texture = ExtResource("1_tt1tp")

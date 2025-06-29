@@ -1,0 +1,171 @@
+[gd_scene load_steps=19 format=3 uid="uid://bbq41x0rb13tv"]
+
+[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="1_3fmf7"]
+[ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="2_6pfaw"]
+[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="3_fq864"]
+[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="4_ra3yb"]
+[ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="5_udfwu"]
+[ext_resource type="Script" path="res://ui/ui.gd" id="6_eujbc"]
+[ext_resource type="PackedScene" uid="uid://dwh15m6vaxtdp" path="res://objects/wardrobe/wardrobe_large.tscn" id="7_np0da"]
+[ext_resource type="PackedScene" uid="uid://i6sf60nrefe0" path="res://objects/wardrobe/wardrobe_small.tscn" id="8_80tyc"]
+[ext_resource type="PackedScene" uid="uid://d4lemonl2dmg0" path="res://objects/lamp/lamp_orange_large.tscn" id="9_bhuhv"]
+[ext_resource type="PackedScene" uid="uid://chsyuygrotg64" path="res://objects/box/mediumBox.tscn" id="10_8f1up"]
+[ext_resource type="PackedScene" uid="uid://cxc6uatiad08k" path="res://objects/shelf/shelf.tscn" id="11_101xf"]
+[ext_resource type="PackedScene" path="res://objects/lamp/lamp_yellow_large.tscn" id="12_tgc8y"]
+[ext_resource type="PackedScene" path="res://objects/lamp/lamp_pink_small.tscn" id="13_iiv77"]
+[ext_resource type="PackedScene" uid="uid://bf0frawo2u75s" path="res://objects/lamp/lamp_orange_small.tscn" id="14_i7djl"]
+
+[sub_resource type="Animation" id="Animation_yryto"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackFade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackFade:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_o8pia"]
+resource_name = "fade_into_black"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackFade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackFade:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_drj5d"]
+resource_name = "fade_out_black"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackFade:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackFade:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j6ycg"]
+_data = {
+"RESET": SubResource("Animation_yryto"),
+"fade_into_black": SubResource("Animation_o8pia"),
+"fade_out_black": SubResource("Animation_drj5d")
+}
+
+[node name="lvlTemplate" type="Node2D"]
+
+[node name="exit" parent="." instance=ExtResource("1_3fmf7")]
+position = Vector2(1927, 39)
+lvlName = "lvl_6"
+
+[node name="Background" parent="." instance=ExtResource("2_6pfaw")]
+position = Vector2(131, 233)
+
+[node name="Cat" parent="." instance=ExtResource("3_fq864")]
+position = Vector2(-188, -201)
+
+[node name="redDot" parent="." instance=ExtResource("4_ra3yb")]
+position = Vector2(314, -18)
+
+[node name="sceneTransition" parent="." instance=ExtResource("5_udfwu")]
+position = Vector2(96, 101)
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("6_eujbc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
+libraries = {
+"": SubResource("AnimationLibrary_j6ycg")
+}
+
+[node name="BlackFade" type="ColorRect" parent="UI"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="wardrobeLarge" parent="." instance=ExtResource("7_np0da")]
+position = Vector2(-227, 149)
+
+[node name="wardrobe_small" parent="." instance=ExtResource("8_80tyc")]
+position = Vector2(1186, 212)
+
+[node name="lampOrangeLarge" parent="." instance=ExtResource("9_bhuhv")]
+position = Vector2(397, 55)
+
+[node name="boxMedium" parent="." instance=ExtResource("10_8f1up")]
+position = Vector2(-284, -100)
+
+[node name="shelf" parent="." instance=ExtResource("11_101xf")]
+position = Vector2(57, -182)
+
+[node name="lampOrangeLarge2" parent="." instance=ExtResource("12_tgc8y")]
+position = Vector2(629, 55)
+
+[node name="lampOrangeLarge3" parent="." instance=ExtResource("9_bhuhv")]
+position = Vector2(849, 55)
+
+[node name="lampOrangeSmall" parent="." instance=ExtResource("13_iiv77")]
+position = Vector2(1468, 54)
+
+[node name="lampOrangeSmall2" parent="." instance=ExtResource("14_i7djl")]
+position = Vector2(1679, 53)
+
+[node name="wardrobe_small2" parent="." instance=ExtResource("8_80tyc")]
+position = Vector2(1939, 212)

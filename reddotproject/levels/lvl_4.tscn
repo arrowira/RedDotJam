@@ -1,12 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://ld4sfm11lipc"]
+[gd_scene load_steps=15 format=3 uid="uid://bh631aku02ax1"]
 
-[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="1_tee23"]
-[ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="4_vqpi7"]
-[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="5_p6p7j"]
-[ext_resource type="PackedScene" uid="uid://i6sf60nrefe0" path="res://objects/wardrobe/wardrobe_small.tscn" id="5_q152a"]
-[ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="5_rcy4f"]
-[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="6_7d38h"]
-[ext_resource type="Script" path="res://ui/ui.gd" id="7_jmh5r"]
+[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="1_ggyep"]
+[ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="2_4yu5j"]
+[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="3_js225"]
+[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="4_2xdw0"]
+[ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="5_66t72"]
+[ext_resource type="Script" path="res://ui/ui.gd" id="6_6626m"]
+[ext_resource type="PackedScene" uid="uid://dwh15m6vaxtdp" path="res://objects/wardrobe/wardrobe_large.tscn" id="7_dq8o1"]
+[ext_resource type="PackedScene" uid="uid://chsyuygrotg64" path="res://objects/box/mediumBox.tscn" id="8_6fobb"]
+[ext_resource type="PackedScene" uid="uid://cxc6uatiad08k" path="res://objects/shelf/shelf.tscn" id="9_gj8bu"]
+[ext_resource type="PackedScene" path="res://objects/lamp/lamp_pink_small.tscn" id="10_wptor"]
 
 [sub_resource type="Animation" id="Animation_yryto"]
 length = 0.001
@@ -98,42 +101,26 @@ _data = {
 "fade_out_black": SubResource("Animation_drj5d")
 }
 
-[node name="lvl2" type="Node2D"]
+[node name="lvlTemplate" type="Node2D"]
 
-[node name="Cat" parent="." instance=ExtResource("1_tee23")]
-position = Vector2(-3, -24)
+[node name="exit" parent="." instance=ExtResource("1_ggyep")]
+position = Vector2(1127, -87)
+lvlName = "lvl_5"
 
-[node name="wardrobe_small" parent="." instance=ExtResource("5_q152a")]
-position = Vector2(-25, 179)
+[node name="Background" parent="." instance=ExtResource("2_4yu5j")]
+position = Vector2(131, 233)
 
-[node name="redDot" parent="." instance=ExtResource("6_7d38h")]
-position = Vector2(146, -125)
+[node name="Cat" parent="." instance=ExtResource("3_js225")]
+position = Vector2(69, 3)
 
-[node name="Background" parent="." instance=ExtResource("4_vqpi7")]
-position = Vector2(133, 198)
+[node name="redDot" parent="." instance=ExtResource("4_2xdw0")]
+position = Vector2(314, -18)
 
-[node name="wardrobe_small2" parent="." instance=ExtResource("5_q152a")]
-position = Vector2(391, 178)
-
-[node name="RichTextLabel" type="Label" parent="."]
-offset_left = -16.0
-offset_top = -99.0
-offset_right = 537.0
-offset_bottom = -57.0
-theme_override_colors/font_color = Color(1, 0.659072, 0.308694, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.263471, 0.514802, 1)
-theme_override_font_sizes/font_size = 30
-text = "Press R to restart the level
-"
-
-[node name="sceneTransition" parent="." instance=ExtResource("5_rcy4f")]
-
-[node name="exit" parent="." instance=ExtResource("5_p6p7j")]
-position = Vector2(441, 17)
-lvlName = "lvl_3"
+[node name="sceneTransition" parent="." instance=ExtResource("5_66t72")]
+position = Vector2(96, 101)
 
 [node name="UI" type="CanvasLayer" parent="."]
-script = ExtResource("7_jmh5r")
+script = ExtResource("6_6626m")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
 libraries = {
@@ -148,3 +135,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
+
+[node name="wardrobeLarge" parent="." instance=ExtResource("7_dq8o1")]
+position = Vector2(-278, 149)
+
+[node name="boxMedium" parent="." instance=ExtResource("8_6fobb")]
+position = Vector2(300, 253)
+
+[node name="shelf" parent="." instance=ExtResource("9_gj8bu")]
+position = Vector2(583, 147)
+
+[node name="lampOrangeSmall" parent="." instance=ExtResource("10_wptor")]
+position = Vector2(883, 56)

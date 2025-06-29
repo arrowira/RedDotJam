@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://ld4sfm11lipc"]
+[gd_scene load_steps=13 format=3 uid="uid://bc0bc3wnawcal"]
 
-[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="1_tee23"]
-[ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="4_vqpi7"]
-[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="5_p6p7j"]
-[ext_resource type="PackedScene" uid="uid://i6sf60nrefe0" path="res://objects/wardrobe/wardrobe_small.tscn" id="5_q152a"]
-[ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="5_rcy4f"]
-[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="6_7d38h"]
-[ext_resource type="Script" path="res://ui/ui.gd" id="7_jmh5r"]
+[ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="1_x5srp"]
+[ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="2_ro6mw"]
+[ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="3_jqjx2"]
+[ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="4_a2sxq"]
+[ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="5_t4hna"]
+[ext_resource type="Script" path="res://ui/ui.gd" id="6_b4q03"]
+[ext_resource type="PackedScene" uid="uid://d4lemonl2dmg0" path="res://objects/lamp/lamp_orange_large.tscn" id="7_a2nw4"]
+[ext_resource type="PackedScene" uid="uid://chsyuygrotg64" path="res://objects/box/mediumBox.tscn" id="8_gpkte"]
 
 [sub_resource type="Animation" id="Animation_yryto"]
 length = 0.001
@@ -98,42 +99,26 @@ _data = {
 "fade_out_black": SubResource("Animation_drj5d")
 }
 
-[node name="lvl2" type="Node2D"]
+[node name="lvlTemplate" type="Node2D"]
 
-[node name="Cat" parent="." instance=ExtResource("1_tee23")]
-position = Vector2(-3, -24)
+[node name="exit" parent="." instance=ExtResource("1_x5srp")]
+position = Vector2(66, -298)
+lvlName = "lvl_7"
 
-[node name="wardrobe_small" parent="." instance=ExtResource("5_q152a")]
-position = Vector2(-25, 179)
+[node name="Background" parent="." instance=ExtResource("2_ro6mw")]
+position = Vector2(131, 233)
 
-[node name="redDot" parent="." instance=ExtResource("6_7d38h")]
-position = Vector2(146, -125)
+[node name="Cat" parent="." instance=ExtResource("3_jqjx2")]
+position = Vector2(80, 222)
 
-[node name="Background" parent="." instance=ExtResource("4_vqpi7")]
-position = Vector2(133, 198)
+[node name="redDot" parent="." instance=ExtResource("4_a2sxq")]
+position = Vector2(314, -18)
 
-[node name="wardrobe_small2" parent="." instance=ExtResource("5_q152a")]
-position = Vector2(391, 178)
-
-[node name="RichTextLabel" type="Label" parent="."]
-offset_left = -16.0
-offset_top = -99.0
-offset_right = 537.0
-offset_bottom = -57.0
-theme_override_colors/font_color = Color(1, 0.659072, 0.308694, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.263471, 0.514802, 1)
-theme_override_font_sizes/font_size = 30
-text = "Press R to restart the level
-"
-
-[node name="sceneTransition" parent="." instance=ExtResource("5_rcy4f")]
-
-[node name="exit" parent="." instance=ExtResource("5_p6p7j")]
-position = Vector2(441, 17)
-lvlName = "lvl_3"
+[node name="sceneTransition" parent="." instance=ExtResource("5_t4hna")]
+position = Vector2(96, 101)
 
 [node name="UI" type="CanvasLayer" parent="."]
-script = ExtResource("7_jmh5r")
+script = ExtResource("6_b4q03")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
 libraries = {
@@ -148,3 +133,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
+
+[node name="lampOrangeLarge" parent="." instance=ExtResource("7_a2nw4")]
+position = Vector2(-142, 53)
+
+[node name="lampOrangeLarge2" parent="." instance=ExtResource("7_a2nw4")]
+position = Vector2(290, 54)
+
+[node name="boxMedium" parent="." instance=ExtResource("8_gpkte")]
+position = Vector2(211, 253)
+
+[node name="boxMedium2" parent="." instance=ExtResource("8_gpkte")]
+position = Vector2(-77, 156)
+
+[node name="boxMedium3" parent="." instance=ExtResource("8_gpkte")]
+position = Vector2(214, 61)
+
+[node name="boxMedium4" parent="." instance=ExtResource("8_gpkte")]
+position = Vector2(-75, -33)
+
+[node name="boxMedium5" parent="." instance=ExtResource("8_gpkte")]
+position = Vector2(215, -140)
