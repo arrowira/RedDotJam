@@ -8,6 +8,7 @@
 radius = 7.81025
 
 [node name="collectable" type="Area2D"]
+position = Vector2(183, 95)
 scale = Vector2(3, 3)
 script = ExtResource("1_gj5dl")
 
