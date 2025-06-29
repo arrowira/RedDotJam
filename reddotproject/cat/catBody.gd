@@ -7,7 +7,7 @@ extends CharacterBody2D
 var dir = 0
 var seesPointer = false
 var redDotVisible = true
-
+var jumping=false
 @onready var vision = $vision
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
@@ -32,7 +32,8 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	else:
-		animation_player.play("walk")
+		if not jumping:
+			animation_player.play("walk")
 	if redDotVisible:
 		#direction cat moves in
 		dir = get_global_mouse_position().x-position.x
@@ -54,10 +55,21 @@ func _physics_process(delta: float) -> void:
 		#jump checks
 		if abs(get_global_mouse_position().y-position.y)>60 and get_global_mouse_position().y<position.y and is_on_floor():
 			#if in jump range
-			if abs(get_global_mouse_position().x-position.x)<150:
-				velocity.y = jumpVelocity
+			if abs(get_global_mouse_position().x-position.x)<150 and not jumping:
+				animation_player.play("jump")
+				print("startJump")
+				jumping=true
+				$Timer.start()
+				
+				
 
 	if velocity.x < 5 and velocity.x > -5:
 			animation_player.play("RESET")
 	
 	move_and_slide()
+
+
+func _on_timer_timeout() -> void:
+	velocity.y = jumpVelocity
+	print("startJumpForce")
+	jumping = false
