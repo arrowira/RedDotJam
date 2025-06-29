@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://u65k0w6alq57"]
+
+[ext_resource type="Script" path="res://collectable.gd" id="1_gj5dl"]
+[ext_resource type="Texture2D" uid="uid://cncoavqfw5423" path="res://common/exit/mouse_toy.png" id="1_oedac"]
+[ext_resource type="AudioStream" uid="uid://calj5lotv6ngg" path="res://common/exit/starPickup.mp3" id="2_1bkgl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5vny6"]
+radius = 7.81025
+
+[node name="collectable" type="Area2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_gj5dl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5vny6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_1bkgl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oedac")

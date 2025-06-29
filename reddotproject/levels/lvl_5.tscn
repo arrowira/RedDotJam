@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bbq41x0rb13tv"]
+[gd_scene load_steps=20 format=3 uid="uid://bbq41x0rb13tv"]
 
 [ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="1_3fmf7"]
 [ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="2_6pfaw"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" path="res://objects/lamp/lamp_yellow_large.tscn" id="12_tgc8y"]
 [ext_resource type="PackedScene" path="res://objects/lamp/lamp_pink_small.tscn" id="13_iiv77"]
 [ext_resource type="PackedScene" uid="uid://bf0frawo2u75s" path="res://objects/lamp/lamp_orange_small.tscn" id="14_i7djl"]
+[ext_resource type="PackedScene" uid="uid://u65k0w6alq57" path="res://collectable.tscn" id="15_t2ksk"]
 
 [sub_resource type="Animation" id="Animation_yryto"]
 length = 0.001
@@ -108,7 +109,7 @@ _data = {
 [node name="lvlTemplate" type="Node2D"]
 
 [node name="exit" parent="." instance=ExtResource("1_3fmf7")]
-position = Vector2(1927, 39)
+position = Vector2(1938, 26)
 lvlName = "lvl_6"
 
 [node name="Background" parent="." instance=ExtResource("2_6pfaw")]
@@ -169,3 +170,6 @@ position = Vector2(1679, 53)
 
 [node name="wardrobe_small2" parent="." instance=ExtResource("8_80tyc")]
 position = Vector2(1939, 212)
+
+[node name="collectable" parent="." instance=ExtResource("15_t2ksk")]
+position = Vector2(1077, -73)

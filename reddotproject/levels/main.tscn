@@ -128,20 +128,20 @@ position = Vector2(185, 366)
 position = Vector2(-15, 271)
 
 [node name="exit" parent="." instance=ExtResource("6_yi7o2")]
-position = Vector2(723, 379)
+position = Vector2(723, 376)
 lvlName = "lvl_2"
 
 [node name="Background" parent="." instance=ExtResource("7_stnct")]
 position = Vector2(148, 352)
 
 [node name="wardrobeLarge2" parent="." instance=ExtResource("5_rsymd")]
-position = Vector2(937, 265)
+position = Vector2(937, 270)
 
 [node name="RichTextLabel" type="Label" parent="."]
 offset_left = 188.0
-offset_top = 214.0
+offset_top = 155.0
 offset_right = 741.0
-offset_bottom = 256.0
+offset_bottom = 197.0
 theme_override_colors/font_color = Color(1, 0.659072, 0.308694, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.263471, 0.514802, 1)
 theme_override_font_sizes/font_size = 30

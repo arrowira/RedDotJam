@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bh631aku02ax1"]
+[gd_scene load_steps=16 format=3 uid="uid://bh631aku02ax1"]
 
 [ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="1_ggyep"]
 [ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="2_4yu5j"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://chsyuygrotg64" path="res://objects/box/mediumBox.tscn" id="8_6fobb"]
 [ext_resource type="PackedScene" uid="uid://cxc6uatiad08k" path="res://objects/shelf/shelf.tscn" id="9_gj8bu"]
 [ext_resource type="PackedScene" path="res://objects/lamp/lamp_pink_small.tscn" id="10_wptor"]
+[ext_resource type="PackedScene" uid="uid://u65k0w6alq57" path="res://collectable.tscn" id="11_du30t"]
 
 [sub_resource type="Animation" id="Animation_yryto"]
 length = 0.001
@@ -104,7 +105,7 @@ _data = {
 [node name="lvlTemplate" type="Node2D"]
 
 [node name="exit" parent="." instance=ExtResource("1_ggyep")]
-position = Vector2(1127, -87)
+position = Vector2(1123, -103)
 lvlName = "lvl_5"
 
 [node name="Background" parent="." instance=ExtResource("2_4yu5j")]
@@ -147,3 +148,9 @@ position = Vector2(583, 147)
 
 [node name="lampOrangeSmall" parent="." instance=ExtResource("10_wptor")]
 position = Vector2(883, 56)
+
+[node name="wardrobeLarge2" parent="." instance=ExtResource("7_dq8o1")]
+position = Vector2(1126, 147)
+
+[node name="collectable" parent="." instance=ExtResource("11_du30t")]
+position = Vector2(788, 270)

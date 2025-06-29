@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bxk8u0yocvw2f"]
+[gd_scene load_steps=18 format=3 uid="uid://bxk8u0yocvw2f"]
 
 [ext_resource type="PackedScene" uid="uid://deh4lr4l0eqfj" path="res://common/exit/exit.tscn" id="1_hai1p"]
 [ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="2_a0ahh"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://d4lemonl2dmg0" path="res://objects/lamp/lamp_orange_large.tscn" id="10_448ew"]
 [ext_resource type="PackedScene" path="res://objects/lamp/lamp_yellow_large.tscn" id="11_cws2g"]
 [ext_resource type="PackedScene" uid="uid://cxc6uatiad08k" path="res://objects/shelf/shelf.tscn" id="12_3ymb6"]
+[ext_resource type="PackedScene" uid="uid://u65k0w6alq57" path="res://collectable.tscn" id="13_04ydh"]
 
 [sub_resource type="Animation" id="Animation_yryto"]
 length = 0.001
@@ -106,7 +107,7 @@ _data = {
 [node name="lvlTemplate" type="Node2D"]
 
 [node name="exit" parent="." instance=ExtResource("1_hai1p")]
-position = Vector2(120, 43)
+position = Vector2(133, 32)
 
 [node name="Background" parent="." instance=ExtResource("2_a0ahh")]
 position = Vector2(2778, 233)
@@ -141,7 +142,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
 [node name="wardrobe_small" parent="." instance=ExtResource("7_1ebew")]
-position = Vector2(68, -128)
+position = Vector2(68, -220)
 
 [node name="wardrobeLarge" parent="." instance=ExtResource("8_umkl8")]
 position = Vector2(-1226, 147)
@@ -163,3 +164,9 @@ position = Vector2(-897, 210)
 
 [node name="wardrobe_small3" parent="." instance=ExtResource("7_1ebew")]
 position = Vector2(-899, -9)
+
+[node name="boxMedium2" parent="." instance=ExtResource("9_qir0f")]
+position = Vector2(5, -61)
+
+[node name="collectable" parent="." instance=ExtResource("13_04ydh")]
+position = Vector2(250, -255)

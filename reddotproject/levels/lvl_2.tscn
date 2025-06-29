@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ld4sfm11lipc"]
+[gd_scene load_steps=13 format=3 uid="uid://ld4sfm11lipc"]
 
 [ext_resource type="PackedScene" uid="uid://lxssocnf1y78" path="res://cat/cat.tscn" id="1_tee23"]
 [ext_resource type="PackedScene" uid="uid://drb6vgeymex4i" path="res://common/background/background.tscn" id="4_vqpi7"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bonavi8ewksq3" path="res://common/scene_transition.tscn" id="5_rcy4f"]
 [ext_resource type="PackedScene" uid="uid://bvbpvexlyuf02" path="res://laser/redDot.tscn" id="6_7d38h"]
 [ext_resource type="Script" path="res://ui/ui.gd" id="7_jmh5r"]
+[ext_resource type="PackedScene" uid="uid://u65k0w6alq57" path="res://collectable.tscn" id="8_uaqld"]
 
 [sub_resource type="Animation" id="Animation_yryto"]
 length = 0.001
@@ -129,7 +130,7 @@ text = "Press R to restart the level
 [node name="sceneTransition" parent="." instance=ExtResource("5_rcy4f")]
 
 [node name="exit" parent="." instance=ExtResource("5_p6p7j")]
-position = Vector2(441, 17)
+position = Vector2(440, -7)
 lvlName = "lvl_3"
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -148,3 +149,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
+
+[node name="collectable" parent="." instance=ExtResource("8_uaqld")]
+position = Vector2(177, -54)
