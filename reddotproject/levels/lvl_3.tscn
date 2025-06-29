@@ -164,4 +164,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
 [node name="collectable" parent="." instance=ExtResource("10_erdvy")]
-position = Vector2(772, 271)
+position = Vector2(-390, 285)
+
+[node name="collectable2" parent="." instance=ExtResource("10_erdvy")]
+position = Vector2(768, 280)

@@ -17,7 +17,7 @@ func _on_body_entered(body):
 		was_transition_triggered = true
 		
 		body.hide()
-		body.set_process(true)
+		body.frozen = true
 		
 		
 		#body.queue_free()

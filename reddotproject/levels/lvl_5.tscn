@@ -110,7 +110,7 @@ _data = {
 
 [node name="exit" parent="." instance=ExtResource("1_3fmf7")]
 position = Vector2(1938, 26)
-lvlName = "lvl_6"
+lvlName = "lvl_7"
 
 [node name="Background" parent="." instance=ExtResource("2_6pfaw")]
 position = Vector2(131, 233)
@@ -172,4 +172,7 @@ position = Vector2(1679, 53)
 position = Vector2(1939, 212)
 
 [node name="collectable" parent="." instance=ExtResource("15_t2ksk")]
-position = Vector2(1077, -73)
+position = Vector2(1402, -261)
+
+[node name="shelf2" parent="." instance=ExtResource("11_101xf")]
+position = Vector2(1165, -253)

@@ -8,6 +8,7 @@ var dir = 0
 var seesPointer = false
 var redDotVisible = true
 var jumping=false
+var frozen = false
 
 @onready var vision = $vision
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -19,6 +20,8 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if frozen:
+		return
 	vision.target_position = to_local(get_global_mouse_position())
 	if vision.is_colliding():
 		redDotVisible = false

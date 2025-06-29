@@ -151,4 +151,4 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
 [node name="collectable" parent="." instance=ExtResource("8_uaqld")]
-position = Vector2(177, -54)
+position = Vector2(180, -23)

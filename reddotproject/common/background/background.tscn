@@ -19,7 +19,7 @@ shape = SubResource("RectangleShape2D_1713r")
 scale = Vector2(0.6, 0.6)
 scroll_offset = Vector2(-0.2, 8)
 repeat_size = Vector2(30, 0)
-repeat_times = 150
+repeat_times = 250
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(0.333333, -2.33333)
